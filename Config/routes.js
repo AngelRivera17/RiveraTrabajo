@@ -1,11 +1,13 @@
 import { Router } from "express";
+import infoController from "../controller/infoController.js";
 
 const router=new Router()
-//Obtener la informacion
+//____________________Obtener la informacion_____________________
 router.get('/info',infoController.index)
-//ENVIAR LA INOFORMACION
+//______________________ENVIAR LA INOFORMACION______________________
 router.post('/info',infoController.store)
-//CONSULTAR INFORMACION DE FORMA ESPECIFICA
+// _____________CONSULTAR INFORMACION DE FORMA ESPECIFICA___________
 router.post('/info:id',infoController.detail)
+
 
 export default router
